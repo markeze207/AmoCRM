@@ -1,0 +1,67 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Май 31 2023 г., 22:09
+-- Версия сервера: 10.4.26-MariaDB-log
+-- Версия PHP: 8.0.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `amoCRM`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `access_token`
+--
+
+CREATE TABLE `access_token` (
+  `ID` int(11) NOT NULL,
+  `access_token` varchar(1100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `refresh_token` varchar(1100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `endTokenTime` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `access_token`
+--
+
+INSERT INTO `access_token` (`ID`, `access_token`, `refresh_token`, `endTokenTime`) VALUES
+(2, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRkZGJiODlkNWYwNmY4MThiMTQ2MGVkYTg2MTlhN2ExNGMzMDc1NDA0ZDA1MjEzNGI3YmM2MWI2NmMwZTJiZGU4Y2Q0ZWExMzQ1MWUzM2QwIn0.eyJhdWQiOiIxOTlhN2E5Yy1kZjdhLTQxMjktOTM0Yy1hMWJlMTI5YTA3NzQiLCJqdGkiOiI0ZGRiYjg5ZDVmMDZmODE4YjE0NjBlZGE4NjE5YTdhMTRjMzA3NTQwNGQwNTIxMzRiN2JjNjFiNjZjMGUyYmRlOGNkNGVhMTM0NTFlMzNkMCIsImlhdCI6MTY4NTUzODUxMywibmJmIjoxNjg1NTM4NTEzLCJleHAiOjE2ODU2MjQ5MTMsInN1YiI6Ijk2NzIxMjIiLCJncmFudF90eXBlIjoiIiwiYWNjb3VudF9pZCI6MzEwOTM0MTQsImJhc2VfZG9tYWluIjoiYW1vY3JtLnJ1IiwidmVyc2lvbiI6InYyIiwic2NvcGVzIjpbInB1c2hfbm90aWZpY2F0aW9ucyIsImZpbGVzIiwiY3JtIiwiZmlsZXNfZGVsZXRlIiwibm90aWZpY2F0aW9ucyJdfQ.qxJv4huSMJqFtZbhuOVuCMxuQLsgaXyNlhpVwZPnt_Um1q23OLXZxoNoxp8bRiLQs2uYmBwubUzLruW16K_U_Mjo2bAHWJJux0oXajA5mfCGNrtiG23Y4nr5UOvqMg0yZguEnyeG7F8Uzx0kLTweJyBb0A1xLnMQQjsw0ysHM3r17cQC3Ek3-ixPbahnl9qiJNM6o4bQImhraxE8hcPK8FGois4MS76J5mIQnNSjygRuy-De7QdFjGbPWDvrP0vIKdBo9MNcHyR8g3fhUnlIoJzHWrO10Fwtxfcb-3CIblIoS1IwGyo9coxQCYu4wFOwqtpdH4MiT22fpqqa0Hqhrw', 'def50200e93730f4f7839f3520cb3968db6447ddc24f011ea2f2e6b51d47057cf6357f4bf996e136fc0834b8e5b35f91341aecb95d3c6dd23b3b19d3c4fa01a7459aa18a668dbf7cffb4854408e547ce1b1334baf9ae34500e9592ab14871932fe9f4cd12f79197d8c2e2844888900d5fa852130c414a7a749dc0c12e1f9f2ec7231c8a88e7c2d482fca64e39b4f431ee01b264d3e8a6552d3cbabda21b23d9489aee8afbbb09c99412294ac6f2f6485d7d1e90eefda23b01c669a454b3ffb34cfafd1d262d16dc49ac80a5d824970f3a52e0b9aa91a216cc257082616bb1b8138bbec3182bcf300db631e0764321a16a47b829abe0c4f70ccfac25a4aec4105ee50dc43698e4e921c4d50c7c219766b84fedf504c3141060e3b3dffecd0cec1b0f43476efcfd2d167dc869dcdf0cd030b0cfd5be827e82a68904bd79bad4209485bca7e651dd41284c48a9a89fd8eecb74f3c86d6a15443fc01121ab373f1e526ae585cc56eb29905d4402cf48bd8dc04290483492e613cbec3083aff3f6d94ccdd09ac9d2e3e563ae9882bec5fc4c74a31d58b5f73d49be3202d5637b4fa2aacca7215737a520582b7928bedc7e7df1f72de9d33a6f4d8bdf77d1f427dad00eda0a2abf3856bc0531c255257b2a30809f013cc1a1a11de87006f7ddbe0afdb04c5e8ba3823ed7c8a015c4eae4ff7f9', 1685624914);
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `access_token`
+--
+ALTER TABLE `access_token`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `access_token`
+--
+ALTER TABLE `access_token`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
